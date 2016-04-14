@@ -2,6 +2,7 @@
 var program = require('commander');
 
 program
+	.option('-p, --private', 'List private repositories')
 	.option('-s, --stale', 'List stale repositories')
 	.parse(process.argv);
 
