@@ -19,7 +19,7 @@
   "author": "Charles Lai <cjl223@cornell.edu>",
   "license": "MIT",
   "bin": {
-    "snippet": "./ghcheck.js"
+    "ghcheck": "./ghcheck.js"
   },
   "bugs": {
     "url": "https://github.com/sup/ghcheck/issues"
