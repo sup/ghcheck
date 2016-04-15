@@ -8,8 +8,8 @@ var fs = require('fs');
 var GitHubApi = require("github");
 
 program
-  .option('-t, --type [all|owner|public|private]', 'List repositories of a specified type', /^(all|owner|public|private|member)$/i)
   .option('-s, --sort [created|updated|pushed|full_name]', 'Sort results by various values', /^(created|updated|pushed|full_name)$/i)
+  .option('-t, --type [all|owner|public|private]', 'List repositories of a specified type', /^(all|owner|public|private|member)$/i)
   .parse(process.argv);
 
 // Get config file
