@@ -1,0 +1,38 @@
+{
+  "name": "ghcheck",
+  "version": "0.0.1",
+  "description": "A command-line tool for checking your Github stats and information.",
+  "main": "ghcheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sup/ghcheck.git"
+  },
+  "keywords": [
+    "cli",
+    "github",
+    "git",
+    "stats"
+  ],
+  "author": "Charles Lai <cjl223@cornell.edu>",
+  "license": "MIT",
+  "bin": {
+    "snippet": "./ghcheck.js"
+  },
+  "bugs": {
+    "url": "https://github.com/sup/ghcheck/issues"
+  },
+  "homepage": "https://github.com/sup/ghcheck#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0",
+    "github": "^0.2.4",
+    "prompt": "^1.0.0",
+    "readline-sync": "^1.4.1",
+    "superagent": "^1.8.3"
+  }
+}
