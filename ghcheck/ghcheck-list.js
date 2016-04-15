@@ -3,7 +3,8 @@
 // Load modules
 var program = require('commander');
 var chalk = require('chalk');
-var util = require('util');
+var readlineSync = require('readline-sync');
+var fs = require('fs');
 var GitHubApi = require("github");
 
 program
@@ -12,7 +13,18 @@ program
   .parse(process.argv);
 
 // Get config file
-var config = util.config;
+var config = require('./config.json');
+if (config.username === "" || config.password === "") {
+  var username = readlineSync.question('Github Username:');
+  var password = readlineSync.question('Github Password:');
+  config.username = username;
+  config.password = password;
+  var user = {
+    username: username,
+    password: password
+  };
+  fs.writeFile("config.json", JSON.stringify(user), "utf8");
+}
 
 // Create new github object
 var github = new GitHubApi({
