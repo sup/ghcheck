@@ -15,8 +15,8 @@ program
 // Get config file
 var config = require('./config.json');
 if (config.username === "" || config.password === "") {
-  var username = readlineSync.question('Github Username:');
-  var password = readlineSync.question('Github Password:');
+  var username = readlineSync.question('Github Username: ');
+  var password = readlineSync.question('Github Password: ');
   config.username = username;
   config.password = password;
   var user = {
