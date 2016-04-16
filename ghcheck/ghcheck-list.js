@@ -67,6 +67,10 @@ if (program.sort) {
 github.repos.getAll(options, function(err, results) {
   for (var index in results) {
     var repo = results[index];
+    // Remove undefined
+    if (repo.url === undefined) {
+      continue;
+    }
     console.log("--------------------------------------------------------------------------------");
     var string = chalk.green(chalk.bold(repo.name)) +
                   "\n" + repo.description +
