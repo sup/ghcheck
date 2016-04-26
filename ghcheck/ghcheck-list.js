@@ -68,13 +68,13 @@ github.repos.getAll(options, function(err, results) {
   for (var index in results) {
     var repo = results[index];
     // Remove undefined
-    if (repo.url === undefined) {
+    if (repo.clone_url === undefined) {
       continue;
     }
     console.log("--------------------------------------------------------------------------------");
     var string = chalk.green(chalk.bold(repo.name)) +
                   "\n" + repo.description +
-                  "\n" + chalk.blue(chalk.underline(repo.url));
+                  "\n" + chalk.blue(chalk.underline(repo.clone_url));
     console.log(string);
     console.log("--------------------------------------------------------------------------------");
   }
